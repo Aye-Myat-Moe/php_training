@@ -6,12 +6,16 @@ session_start();
         <title>User Login</title>
     </head>
     <body>
-        <?php
-        if($_SESSION["name"]) {
-        ?>
-        Welcome <?php echo $_SESSION["name"]; ?>. Click here to <a href="logout.php" tite="Logout">Logout.
-        <?php
-        }else echo "<h1>Please login first .</h1>";
-        ?>
+        <form method="post" action="login.php">
+            <h3>Enter Login Details</h3>
+            Username:<br>
+            <input type="text" name="name">
+            <br>
+            Password:<br>
+            <input type="password" name="password">
+            <br><br>
+            <input type="submit" name="submit" value="Submit">
+            <input type="reset">
+        </form>
     </body>
 </html>
