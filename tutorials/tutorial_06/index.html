@@ -1,15 +1,20 @@
 <!DOCTYPE html>
- <html>
- <body>
-<form action="index.php" method="post" enctype="multipart/form-data">
-    <h2>
-        Create New Folder
-    </h2>
-    <label for="image">Image</label>
-    <input type="file" name="img_upload"><br><br>
-    <label for="folder">Folder</label>
-    <input name="createfolder" type="text"><br><br>
-    <input type="submit" value="save">
-</form>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial_06</title>
+</head>
+
+<body>
+    <h2>Creating Folder</h2>
+    <form action="index.php" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file"><br><br>
+        <input type="text" name="foldername" placeholder="Folder name"><br><br>
+        <input type="submit" name="uploadfile" value="save">
+    </form>
 </body>
+
 </html>
