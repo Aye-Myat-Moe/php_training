@@ -1,0 +1,37 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.clearfix::before,
+.clearfix::after {
+  display: table;
+  content: "";
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.ttl {
+  margin: 80px 0 50px;
+  font-size: 40px;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 20px;
+  border: 1px solid #1ed8d5;
+  background-color: transparent;
+  color: #1ed8d5;
+  font-size: 14px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.4s;
+}

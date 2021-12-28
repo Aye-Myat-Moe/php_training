@@ -1,0 +1,170 @@
+/*index page */
+.btn-graph {
+  float: right;
+  background-color: #1ed8d5;
+  color: #fff;
+}
+
+.btn-graph:hover {
+  background-color: #fff;
+  color: #1ed8d5;
+}
+
+.btn-add {
+  float: left;
+  margin-bottom: 20px;
+  margin-left: auto;
+}
+
+.btn-add:hover,
+.btn-edit:hover {
+  background-color: #1ed8d5;
+  color: #fff;
+}
+
+
+.item-table tr {
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.item-table tr:nth-last-of-type(odd) {
+  background-color: #ddd;
+}
+
+.item-table tr:hover {
+  background-color: #ccc;
+}
+
+.item-table tr th,
+.item-table tr td {
+  width: 100px;
+  padding: 10px 0px;
+}
+
+.item-table tr th:last-of-type,
+.item-table tr td:last-of-type {
+  width: 200px;
+}
+
+.item-table th {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn-delete,
+.btn-back {
+  border: 1px solid #f41404;
+  color: #f41404;
+}
+
+.btn-delete:hover,
+.btn-back:hover {
+  background-color: #f41404;
+  color: #fff;
+}
+
+/*add page */
+.add-form {
+  padding: 20px 0;
+  border: 1px solid #000;
+  text-align: left;
+}
+
+.add-form .form-row {
+  width: 95%;
+  margin: 10px auto;
+}
+
+.add-form label {
+  display: inline-block;
+  width: 20%;
+  margin-left: 20px;
+}
+
+.add-form input,
+.add-form select {
+  display: inline-block;
+  width: 70%;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.btn-back {
+  margin-top: 20px;
+  margin-left: 250px;
+}
+
+.btn-save {
+  margin-top: 20px;
+  margin-left: 20px;
+  color: #029111;
+  border-color: #029111;
+}
+
+.btn-save:hover {
+  background-color: #029111;
+  color: #fff;
+}
+
+.btn-register {
+  margin-top: 20px;
+  margin-left: 20px;
+  color: #847d7d;
+  border-color: #847d7d;
+}
+
+.btn-register:hover {
+  background-color: #847d7d;
+  color: #fff;
+}
+
+.graph-wrapper {
+  width: 600px;
+  margin: 100px auto;
+}
+
+.graph-wrapper .btn {
+  margin-left: 0;
+}
+
+.btn-wrapper {
+  padding: 0 250px;
+}
+
+.error-message {
+  margin-top: 5px;
+  text-align: center;
+  display: block;
+  color: #f41404;
+}
+
+.btn.btn-logout,
+.btn-back-graph {
+  position: absolute;
+  color: #fff;
+  background-color: #f41404;
+  border: 1px solid #f41404;
+  top: 50px;
+  right: 285px;
+}
+
+.btn-logout:hover,
+.btn-back-graph:hover {
+  background-color: #fff;
+  color: #f41404;
+  border: 1px solid #f41404;
+}
+
+.alert {
+  color: #00d4ff;
+}
+
+.btn.btn-send {
+  margin-left: 300px;
+}
+
+.forget-pass {
+  padding-left: 180px;
+  font-size: 12px;
+}
