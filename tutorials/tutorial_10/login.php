@@ -1,83 +1,47 @@
-<?php
-  session_start();
-
-  require_once "config.php";
-
-  $email = '';
-  $password = '';
-  $errors = [];
-  $emailsInDb = [];
-  $passwordsInDb = '';
-
-  $sql = "SELECT email FROM users";
-  $results = $conn->query($sql);
-
-  foreach ($results as $result) {
-    array_push($emailsInDb, $result['email']);
-  }
-
-  if (isset($_POST['submit'])) {
-    $email = $_POST['email'] ?? '';
-    $password = $_POST['password'] ?? '';
-    if(!$email) {
-      $errors['email'] = '*Email is required!';
-    } elseif (!in_array($email,$emailsInDb)) {
-      $errors['email'] = '*Email is not register!';
-    }
-
-    $sql = "SELECT password FROM users WHERE email='".$email."'";
-    $results = $conn->query($sql);
-
-    foreach ($results as $result) {
-      $passwordsInDb = $result['password'];
-    }
-
-    if (!$password) {
-      $errors['password'] = '*Password is required!';
-    } elseif ($password !== $passwordsInDb) {
-      $errors['password'] = '*Password is wrong!';
-    }
-    
-    if (!$errors) {
-        $_SESSION['auth'] = TRUE;
-        header('Location:index.php');
-        exit();
-    }
-  }
-?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tutorial 10</title>
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<title>Login</title>
+<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <h1 class="ttl">Login Here</h1>
-
-    <div class="container">
-     <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST" class="add-form" autocomplete="off">
-      <div class="form-row">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" class="email" placeholder="Enter your eamil" value=<?= $email ?>>
-        <small class="error-message"><?= $errors['email'] ?? '' ?></small>
-      </div>
-      <div class="form-row">
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" class="password" placeholder="Enter your password">
-        <small class="error-message"><?= $errors['password'] ?? '' ?></small>
-      </div>
-      <div class="form-row">
-        <a href="sendmail.php" class="forget-pass">Forget password?</a>
-      </div>
-      <div class="form-row btn-wrapper">
-        <button type="submit" name="submit" class="btn btn-save">Login</button>
-        <a href="register.php" class="btn btn-register">Register</a>
-      </div>
-     </form>
-   </div>
+<?php
+require('db.php');
+session_start();
+// If form submitted, insert values into the database.
+if (isset($_POST['username'])){
+        // removes backslashes
+	$username = stripslashes($_REQUEST['username']);
+        //escapes special characters in a string
+	$username = mysqli_real_escape_string($con,$username);
+	$password = stripslashes($_REQUEST['password']);
+	$password = mysqli_real_escape_string($con,$password);
+	//Checking is user existing in the database or not
+        $query = "SELECT * FROM `users` WHERE username='$username'
+and password='".md5($password)."'";
+	$result = mysqli_query($con,$query) or die(mysql_error());
+	$rows = mysqli_num_rows($result);
+        if($rows==1){
+	    $_SESSION['username'] = $username;
+            // Redirect user to index.php
+	    header("Location: index.php");
+         }else{
+	echo "<div class='form'>
+<h3>Username/password is incorrect.</h3>
+<br/>Click here to <a href='login.php'>Login</a></div>";
+	}
+    }else{
+?>
+<div class="form">
+<h1>Log In</h1>
+<form action="" method="post" name="login">
+<input type="text" name="username" placeholder="Username" required />
+<input type="password" name="password" placeholder="Password" required />
+<input name="submit" type="submit" value="Login" />
+</form>
+<p>Not registered yet? <a href='registration.php'>Register Here</a></p>
+</div>
+<?php } ?>
 </body>
 </html>

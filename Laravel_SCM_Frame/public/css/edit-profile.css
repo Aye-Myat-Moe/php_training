@@ -1,0 +1,14 @@
+.preview-profile {
+  width: 200px;
+  border: 1px solid rgb(206, 212, 218);
+  border-radius: 3px;
+}
+
+.profile {
+  padding: 3px !important;
+}
+
+.required:after {
+  content: "*";
+  color: red;
+}

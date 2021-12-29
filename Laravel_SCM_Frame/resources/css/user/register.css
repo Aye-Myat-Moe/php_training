@@ -1,0 +1,35 @@
+.register-title {
+    background: #1976d2;
+    color: #ffffff;
+}
+
+.register-input {
+    height: 70px;
+}
+
+.preview {
+    width: 200px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.register-action {
+    padding: 0 24px 20px;
+}
+
+.register-content {
+  padding-bottom: 0px;;
+}
+
+.confirm-lbl {
+    float: left;
+    min-width: 150px;
+}
+
+.confirm-value {
+    display: "inline-table" !important;
+}
+
+.confirm-box {
+  padding-bottom: 15px;
+}

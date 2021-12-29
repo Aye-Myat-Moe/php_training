@@ -1,0 +1,16 @@
+.edit-post-title {
+  background: #1976d2;
+  color: #ffffff;
+}
+
+.edit-post-action {
+  padding: 0 24px 20px;
+}
+
+.edit-post-input {
+  height: 70px;
+}
+
+.status-lbl {
+  margin: auto 5px;
+}
