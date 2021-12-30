@@ -1,0 +1,12 @@
+.create-post-title {
+    background: #1976d2;
+    color: #ffffff;
+}
+
+.create-post-action {
+    padding: 0 24px 20px;
+}
+
+.create-post-input {
+  height: 70px;
+}

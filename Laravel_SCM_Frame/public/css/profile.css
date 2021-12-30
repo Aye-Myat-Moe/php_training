@@ -1,0 +1,9 @@
+.preview-profile {
+  width: 170px;
+  border: 1px solid rgb(206, 212, 218);
+  border-radius: 3px;
+}
+
+.profile-text {
+  color: chocolate;
+}

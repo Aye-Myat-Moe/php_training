@@ -1,0 +1,19 @@
+.filter-bar {
+    padding: 0px 10px;
+}
+
+.post-list-btn {
+    margin: auto;
+}
+
+.post-list-btn:hover {
+  text-decoration: none;
+}
+
+.operation-btn {
+    margin: 5px;
+}
+
+.detail-row {
+  height: 30px;
+}

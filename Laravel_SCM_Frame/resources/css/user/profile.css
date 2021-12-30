@@ -1,0 +1,7 @@
+.profile-box {
+    background: url("../../image/loading.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+}

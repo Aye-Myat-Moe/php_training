@@ -1,0 +1,21 @@
+.user-list-btn {
+  margin: auto;
+}
+
+.filter-bar {
+  padding: 0px 10px;
+}
+
+.filter-error {
+  text-align: center;
+}
+
+.preview {
+  width: 200px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.detail-row {
+  height: 30px;
+}

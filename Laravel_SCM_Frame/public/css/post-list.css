@@ -1,0 +1,41 @@
+.post-name {
+  cursor: pointer;
+  color: chocolate !important;
+}
+
+.post-name:hover {
+  text-decoration: underline !important;
+}
+
+.post-text {
+  color: chocolate;
+}
+
+.header-btn {
+  color: white !important;
+  padding: 6px 10px;
+  height: 37px;
+  margin: 0px 5px;
+  width: 150px;
+}
+
+.search-input {
+  width: 160px;
+  margin: 0px 5px;
+}
+
+.search-bar {
+  float: right;
+  margin: 0px;
+}
+
+.search-btn {
+width: 150px;
+margin: 0px 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .search-lbl {
+      width: 70px;
+  }
+}

@@ -1,0 +1,14 @@
+.profile-edit-title {
+    background: #1976d2;
+    color: #ffffff;
+}
+
+.profile-edit-input {
+    height: 70px;
+}
+
+.preview {
+    width: 200px;
+    border-radius: 5px;
+    margin: 5px;
+}
